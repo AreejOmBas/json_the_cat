@@ -10,8 +10,8 @@ if (!breedName) {
 
 fetchBreedDescription(breedName, (error, desc) => {
   if (error) {
-    console.log('Error fetch details:', error);
+    throw error('Error fetch details:', error);
   } else {
-    console.log(`\n Breed Description: \n${desc}\n`);
+    console.log(`${desc}`);
   }
 });
